@@ -1,0 +1,14 @@
+// const path = require("path");
+// const fs = require("fs");
+
+// let getFixture = (moduleName, fixtureName) => {
+//   return fs.readFileSync(
+//     path.join(`${__dirname}/fixtures/${moduleName}/${fixtureName}.json`),
+//     "UTF8"
+//   );
+// };
+
+// module.exports = {
+//   prerequestPayment: getFixture("prerequest", "payment"),
+//   prerequestPayout: getFixture("prerequest", "payout")
+// };

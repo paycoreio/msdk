@@ -1,0 +1,122 @@
+{
+  "data": {
+    "type": "payment-prerequest",
+    "attributes": {
+      "currency": "USD",
+      "test_mode": false,
+      "services": {
+        "interkassa_uah_hpp": {
+          "code": "interkassa_uah_hpp",
+          "method": "interkassa",
+          "flow": "hpp",
+          "currency": "UAH",
+          "fields": [],
+          "status": "available"
+        },
+        "ethereum_eth_hpp": {
+          "code": "ethereum_eth_hpp",
+          "method": "ethereum",
+          "flow": "hpp",
+          "currency": "ETH",
+          "fields": [],
+          "status": "available"
+        },
+        "bitcoin_btc_hpp": {
+          "code": "bitcoin_btc_hpp",
+          "method": "bitcoin",
+          "flow": "hpp",
+          "currency": "BTC",
+          "fields": [],
+          "status": "available"
+        },
+        "qiwi_rub_hpp": {
+          "code": "qiwi_rub_hpp",
+          "method": "qiwi",
+          "flow": "hpp",
+          "currency": "RUB",
+          "fields": [
+            {
+              "key": "phone",
+              "type": "string",
+              "label": {
+                "ru": "Номер телефона",
+                "en": "Phone number",
+                "uk": "Номер телефону"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите номер телефона",
+                "en": "Enter phone number",
+                "uk": "Введіть номер телефону"
+              },
+              "regexp": "^\\\\+(9[976]\\\\d|8[987530]\\\\d|6[987]\\\\d|5[90]\\\\d|42\\\\d|3[875]\\\\d|2[98654321]\\\\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\\\\d{9,14}$",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "status": "available"
+        },
+        "usdt_usd_hpp": {
+          "code": "usdt_usd_hpp",
+          "method": "usdt",
+          "flow": "hpp",
+          "currency": "USD",
+          "fields": [],
+          "status": "available"
+        },
+        "litecoin_ltc_hpp": {
+          "code": "litecoin_ltc_hpp",
+          "method": "litecoin",
+          "flow": "hpp",
+          "currency": "LTC",
+          "fields": [],
+          "status": "available"
+        }
+      },
+      "methods": {
+        "interkassa": {
+          "code": "interkassa",
+          "name": "Interkassa",
+          "category": "internet_banking",
+          "logo": "https://static.openfintech.io/payment_methods/interkassa/logo.svg",
+          "icon": "https://static.openfintech.io/payment_methods/interkassa/icon.svg"
+        },
+        "ethereum": {
+          "code": "ethereum",
+          "name": "Ethereum",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payment_methods/ethereum/logo.png",
+          "icon": "https://static.openfintech.io/payment_methods/ethereum/icon.png"
+        },
+        "bitcoin": {
+          "code": "bitcoin",
+          "name": "Bitcoin",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payment_methods/bitcoin/logo.png",
+          "icon": "https://static.openfintech.io/payment_methods/bitcoin/icon.png"
+        },
+        "qiwi": {
+          "code": "qiwi",
+          "name": "VISA QIWI Wallet",
+          "category": "digital_wallet",
+          "logo": "https://static.openfintech.io/payment_methods/qiwi/logo.png",
+          "icon": "https://static.openfintech.io/payment_methods/qiwi/icon.png"
+        },
+        "usdt": {
+          "code": "usdt",
+          "name": "Tether",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payment_methods/usdt/logo.png",
+          "icon": "https://static.openfintech.io/payment_methods/usdt/icon.png"
+        },
+        "litecoin": {
+          "code": "litecoin",
+          "name": "Litecoin",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payment_methods/litecoin/logo.png",
+          "icon": "https://static.openfintech.io/payment_methods/litecoin/icon.png"
+        }
+      }
+    }
+  }
+}

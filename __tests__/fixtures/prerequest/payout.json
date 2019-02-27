@@ -1,0 +1,4550 @@
+{
+  "data": {
+    "type": "payout-prerequest",
+    "attributes": {
+      "currency": "USD",
+      "test_mode": false,
+      "services": {
+        "ethereum_eth": {
+          "code": "ethereum_eth",
+          "method": "ethereum",
+          "currency": "ETH",
+          "fields": [
+            {
+              "key": "wallet_id",
+              "type": "string",
+              "label": {
+                "ru": "Ethereum кошелек",
+                "en": "Ethereum wallet",
+                "uk": "Ethereum гаманець"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Ethereum кошелек",
+                "en": "Enter Ethereum wallet",
+                "uk": "Введіть Ethereum гаманець"
+              },
+              "regexp": "\\\\+\\\\d{1,15}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "0.00001000",
+          "amount_max": "100.00000000",
+          "exchange_rate": 0.009457,
+          "status": "available"
+        },
+        "bitcoin_btc": {
+          "code": "bitcoin_btc",
+          "method": "bitcoin",
+          "currency": "BTC",
+          "fields": [
+            {
+              "key": "wallet_id",
+              "type": "string",
+              "label": {
+                "ru": "Bitcoin кошелек",
+                "en": "Bitcoin wallet",
+                "uk": "Bitcoin гаманець"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bitcoin кошелек",
+                "en": "Enter Bitcoin wallet",
+                "uk": "Введіть Bitcoin гаманець"
+              },
+              "regexp": "\\\\+\\\\d{1,15}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "0.00001000",
+          "amount_max": "50.00000000",
+          "exchange_rate": 0.00024889,
+          "status": "available"
+        },
+        "webmoneytransfer_usd": {
+          "code": "webmoneytransfer_usd",
+          "method": "webmoneytransfer",
+          "currency": "USD",
+          "fields": [],
+          "amount_min": "1.00000000",
+          "amount_max": "63000.00000000",
+          "exchange_rate": 1,
+          "status": "available"
+        },
+        "tether_usd": {
+          "code": "tether_usd",
+          "method": "usdt",
+          "currency": "USD",
+          "fields": [],
+          "amount_min": "10.00000000",
+          "amount_max": "21943.00000000",
+          "exchange_rate": 1,
+          "status": "available"
+        },
+        "bank_card_rub": {
+          "code": "bank_card_rub",
+          "method": "bank_card",
+          "currency": "RUB",
+          "fields": [
+            {
+              "key": "card_number",
+              "type": "string",
+              "label": {
+                "ru": "Номер карты",
+                "en": "Card number",
+                "uk": "Номер карти"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите номер карты",
+                "en": "Enter card number",
+                "uk": "Введіть номер карти"
+              },
+              "regexp": "\\\\d{12,19}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "0.01000000",
+          "amount_max": "100000.00000000",
+          "exchange_rate": 65.2582,
+          "status": "available"
+        },
+        "webmoneytransfer_rub": {
+          "code": "webmoneytransfer_rub",
+          "method": "webmoneytransfer",
+          "currency": "RUB",
+          "fields": [],
+          "amount_min": "1.00000000",
+          "amount_max": "63000.00000000",
+          "exchange_rate": 65.2582,
+          "status": "available"
+        },
+        "litecoin_ltc": {
+          "code": "litecoin_ltc",
+          "method": "litecoin",
+          "currency": "LTC",
+          "fields": [
+            {
+              "key": "wallet_id",
+              "type": "string",
+              "label": {
+                "ru": "Litecoin кошелек",
+                "en": "Litecoin wallet",
+                "uk": "Litecoin гаманець"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Litecoin кошелек",
+                "en": "Enter Litecoin wallet",
+                "uk": "Введіть Litecoin гаманець"
+              },
+              "regexp": "\\\\+\\\\d{1,15}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "0.00001000",
+          "amount_max": "100.00000000",
+          "exchange_rate": 0.03127,
+          "status": "available"
+        },
+        "qiwi_rub": {
+          "code": "qiwi_rub",
+          "method": "qiwi",
+          "currency": "RUB",
+          "fields": [
+            {
+              "key": "wallet_id",
+              "type": "string",
+              "label": {
+                "ru": "Qiwi кошелек",
+                "en": "Qiwi wallet",
+                "uk": "Qiwi гаманець"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Qiwi кошелек",
+                "en": "Enter Qiwi wallet",
+                "uk": "Введіть Qiwi гаманець"
+              },
+              "regexp": "\\\\+\\\\d{1,15}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "50.00000000",
+          "amount_max": "60000.00000000",
+          "exchange_rate": 65.2582,
+          "status": "available"
+        },
+        "bank_card_uah": {
+          "code": "bank_card_uah",
+          "method": "bank_card",
+          "currency": "UAH",
+          "fields": [
+            {
+              "key": "card_number",
+              "type": "string",
+              "label": {
+                "ru": "Номер карты",
+                "en": "Card number",
+                "uk": "Номер карти"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите номер карты",
+                "en": "Enter card number",
+                "uk": "Введіть номер карти"
+              },
+              "regexp": "\\\\d{12,19}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "0.01000000",
+          "amount_max": "14900.00000000",
+          "exchange_rate": 27.10027,
+          "status": "available"
+        },
+        "zhuhai_rural_credit_cooperatives_cny": {
+          "code": "zhuhai_rural_credit_cooperatives_cny",
+          "method": "zhuhai_rural_credit_cooperatives",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_east_asia_cny": {
+          "code": "bank_of_east_asia_cny",
+          "method": "bank_of_east_asia",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "shanghai_rural_commercial_bank_cny": {
+          "code": "shanghai_rural_commercial_bank_cny",
+          "method": "shanghai_rural_commercial_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_bohai_bank_cny": {
+          "code": "china_bohai_bank_cny",
+          "method": "china_bohai_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_nanjing_cny": {
+          "code": "bank_of_nanjing_cny",
+          "method": "bank_of_nanjing",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "hangzhou_city_commercial_bank_cny": {
+          "code": "hangzhou_city_commercial_bank_cny",
+          "method": "hangzhou_city_commercial_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "huishang_bank_cny": {
+          "code": "huishang_bank_cny",
+          "method": "huishang_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_shanghai_cny": {
+          "code": "bank_of_shanghai_cny",
+          "method": "bank_of_shanghai",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_chengdu_cny": {
+          "code": "bank_of_chengdu_cny",
+          "method": "bank_of_chengdu",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "shenzhen_develop_bank_cny": {
+          "code": "shenzhen_develop_bank_cny",
+          "method": "shenzhen_develop_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_beijing_cny": {
+          "code": "bank_of_beijing_cny",
+          "method": "bank_of_beijing",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "shude_rural_credit_union_cny": {
+          "code": "shude_rural_credit_union_cny",
+          "method": "shude_rural_credit_union",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "yaodu_rural_credit_union_cny": {
+          "code": "yaodu_rural_credit_union_cny",
+          "method": "yaodu_rural_credit_union",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "jin_shang_commercial_bank_cny": {
+          "code": "jin_shang_commercial_bank_cny",
+          "method": "jin_shang_commercial_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_union_pay_cny": {
+          "code": "china_union_pay_cny",
+          "method": "china_union_pay",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_minsheng_bank_cny": {
+          "code": "china_minsheng_bank_cny",
+          "method": "china_minsheng_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "shanghai_pudong_development_bank_cny": {
+          "code": "shanghai_pudong_development_bank_cny",
+          "method": "shanghai_pudong_development_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "industrial_and_commercial_bank_of_china_cny": {
+          "code": "industrial_and_commercial_bank_of_china_cny",
+          "method": "industrial_and_commercial_bank_of_china",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_communication_cny": {
+          "code": "bank_of_communication_cny",
+          "method": "bank_of_communication",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "ping_an_bank_cny": {
+          "code": "ping_an_bank_cny",
+          "method": "ping_an_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_construction_bank_cny": {
+          "code": "china_construction_bank_cny",
+          "method": "china_construction_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_everbright_bank_cny": {
+          "code": "china_everbright_bank_cny",
+          "method": "china_everbright_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "agricultural_bank_of_china_cny": {
+          "code": "agricultural_bank_of_china_cny",
+          "method": "agricultural_bank_of_china",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bank_of_china_cny": {
+          "code": "bank_of_china_cny",
+          "method": "bank_of_china",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_postal_savings_bank_cny": {
+          "code": "china_postal_savings_bank_cny",
+          "method": "china_postal_savings_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_merchants_bank_cny": {
+          "code": "china_merchants_bank_cny",
+          "method": "china_merchants_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_guangfa_bank_cny": {
+          "code": "china_guangfa_bank_cny",
+          "method": "china_guangfa_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "industrial_bank_cny": {
+          "code": "industrial_bank_cny",
+          "method": "industrial_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "china_citic_bank_cny": {
+          "code": "china_citic_bank_cny",
+          "method": "china_citic_bank",
+          "currency": "CNY",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "60.00000000",
+          "amount_max": "49000.00000000",
+          "exchange_rate": 6.74,
+          "status": "available"
+        },
+        "bangko_bank_thb": {
+          "code": "bangko_bank_thb",
+          "method": "bangko_bank",
+          "currency": "THB",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "350.00000000",
+          "amount_max": "175000.00000000",
+          "exchange_rate": 31.25,
+          "status": "available"
+        },
+        "kasikorn_bank_thb": {
+          "code": "kasikorn_bank_thb",
+          "method": "kasikorn_bank",
+          "currency": "THB",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "350.00000000",
+          "amount_max": "175000.00000000",
+          "exchange_rate": 31.25,
+          "status": "available"
+        },
+        "krungsri_thb": {
+          "code": "krungsri_thb",
+          "method": "krungsri",
+          "currency": "THB",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "350.00000000",
+          "amount_max": "175000.00000000",
+          "exchange_rate": 31.25,
+          "status": "available"
+        },
+        "krung_thai_bank_thb": {
+          "code": "krung_thai_bank_thb",
+          "method": "krung_thai_bank",
+          "currency": "THB",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "350.00000000",
+          "amount_max": "175000.00000000",
+          "exchange_rate": 31.25,
+          "status": "available"
+        },
+        "siam_commercial_bank_thb": {
+          "code": "siam_commercial_bank_thb",
+          "method": "siam_commercial_bank",
+          "currency": "THB",
+          "fields": [
+            {
+              "key": "bank_branch",
+              "type": "string",
+              "label": {
+                "ru": "Bank Branch",
+                "en": "Bank Branch",
+                "uk": "Bank Branch"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Branch",
+                "en": "Enter Bank Branch",
+                "uk": "Введіть Bank Branch"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "customer_name",
+              "type": "string",
+              "label": {
+                "ru": "Имя покупателя",
+                "en": "Customer name",
+                "uk": "Ім'я клієнта"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите имя покупателя",
+                "en": "Enter customer name",
+                "uk": "Введіть ім'я клієнта"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_name",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Name",
+                "en": "Bank Account Name",
+                "uk": "Bank Account Name"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Name",
+                "en": "Enter Bank Account Name",
+                "uk": "Введіть Bank Account Name"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "bank_account_number",
+              "type": "string",
+              "label": {
+                "ru": "Bank Account Number",
+                "en": "Bank Account Number",
+                "uk": "Bank Account Number"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите Bank Account Number",
+                "en": "Enter Bank Account Number",
+                "uk": "Введіть Bank Account Number"
+              },
+              "regexp": "[0-9]{5,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "province",
+              "type": "string",
+              "label": {
+                "ru": "Провинция",
+                "en": "Province",
+                "uk": "Провінція"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите провинцию",
+                "en": "Enter province",
+                "uk": "Введіть провінцію"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            },
+            {
+              "key": "city",
+              "type": "string",
+              "label": {
+                "ru": "Город",
+                "en": "City",
+                "uk": "Місто"
+              },
+              "example": null,
+              "hint": {
+                "ru": "Введите город",
+                "en": "Enter city",
+                "uk": "Введіть місто"
+              },
+              "regexp": "[A-z,a-z,0-9]{2,100}",
+              "required": true,
+              "weight": 0
+            }
+          ],
+          "amount_min": "350.00000000",
+          "amount_max": "175000.00000000",
+          "exchange_rate": 31.25,
+          "status": "available"
+        }
+      },
+      "methods": {
+        "ethereum": {
+          "code": "ethereum",
+          "name": "Ethereum",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payout_methods/ethereum/logo.png",
+          "icon": "https://static.openfintech.io/payout_methods/ethereum/icon.png"
+        },
+        "bitcoin": {
+          "code": "bitcoin",
+          "name": "Bitcoin",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payout_methods/bitcoin/logo.png",
+          "icon": "https://static.openfintech.io/payout_methods/bitcoin/icon.png"
+        },
+        "webmoneytransfer": {
+          "code": "webmoneytransfer",
+          "name": "Webmoney transfer",
+          "category": "digital_wallet",
+          "logo": "https://static.openfintech.io/payout_methods/webmoneytransfer/logo.svg",
+          "icon": "https://static.openfintech.io/payout_methods/webmoneytransfer/icon.svg"
+        },
+        "usdt": {
+          "code": "usdt",
+          "name": "Tether",
+          "category": "alternative",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_card": {
+          "code": "bank_card",
+          "name": "Card",
+          "category": "payment_card",
+          "logo": "https://static.openfintech.io/payout_methods/bank_card/logo.svg",
+          "icon": "https://static.openfintech.io/payout_methods/bank_card/icon.svg"
+        },
+        "litecoin": {
+          "code": "litecoin",
+          "name": "Litecoin",
+          "category": "alternative",
+          "logo": "https://static.openfintech.io/payout_methods/litecoin/logo.png",
+          "icon": "https://static.openfintech.io/payout_methods/litecoin/icon.png"
+        },
+        "qiwi": {
+          "code": "qiwi",
+          "name": "Qiwi",
+          "category": "digital_wallet",
+          "logo": "https://static.openfintech.io/payout_methods/qiwi/logo.png",
+          "icon": "https://static.openfintech.io/payout_methods/qiwi/icon.png"
+        },
+        "zhuhai_rural_credit_cooperatives": {
+          "code": "zhuhai_rural_credit_cooperatives",
+          "name": "Zhuhai Rural Credit Cooperatives",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_east_asia": {
+          "code": "bank_of_east_asia",
+          "name": "Bank of East Asia",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "shanghai_rural_commercial_bank": {
+          "code": "shanghai_rural_commercial_bank",
+          "name": "Shanghai Rural Commercial Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_bohai_bank": {
+          "code": "china_bohai_bank",
+          "name": "China BoHai Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_nanjing": {
+          "code": "bank_of_nanjing",
+          "name": "Bank Of NanJing",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "hangzhou_city_commercial_bank": {
+          "code": "hangzhou_city_commercial_bank",
+          "name": "Hangzhou City Commercial Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "huishang_bank": {
+          "code": "huishang_bank",
+          "name": "HuiShang Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_shanghai": {
+          "code": "bank_of_shanghai",
+          "name": "Bank of Shanghai",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_chengdu": {
+          "code": "bank_of_chengdu",
+          "name": "BANK OF CHENGDU",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "shenzhen_develop_bank": {
+          "code": "shenzhen_develop_bank",
+          "name": "Shenzhen Develop Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_beijing": {
+          "code": "bank_of_beijing",
+          "name": "Bank of Beijing",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "shude_rural_credit_union": {
+          "code": "shude_rural_credit_union",
+          "name": "SHUNDE RURAL CREDIT UNION",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "yaodu_rural_credit_union": {
+          "code": "yaodu_rural_credit_union",
+          "name": "YAODU RURAL CREDIT UNION",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "jin_shang_commercial_bank": {
+          "code": "jin_shang_commercial_bank",
+          "name": "Jin Shang Commercial Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_union_pay": {
+          "code": "china_union_pay",
+          "name": "China Union Pay",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_minsheng_bank": {
+          "code": "china_minsheng_bank",
+          "name": "China Minsheng Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "shanghai_pudong_development_bank": {
+          "code": "shanghai_pudong_development_bank",
+          "name": "Shanghai Pudong Development Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "industrial_and_commercial_bank_of_china": {
+          "code": "industrial_and_commercial_bank_of_china",
+          "name": "Industrial and Commercial Bank of China",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_communication": {
+          "code": "bank_of_communication",
+          "name": "Bank of Communication",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "ping_an_bank": {
+          "code": "ping_an_bank",
+          "name": "Ping An Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_construction_bank": {
+          "code": "china_construction_bank",
+          "name": "China Construction Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_everbright_bank": {
+          "code": "china_everbright_bank",
+          "name": "China Everbright Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "agricultural_bank_of_china": {
+          "code": "agricultural_bank_of_china",
+          "name": "Agricultural Bank of China",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bank_of_china": {
+          "code": "bank_of_china",
+          "name": "Bank of China",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_postal_savings_bank": {
+          "code": "china_postal_savings_bank",
+          "name": "China Postal Savings Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_merchants_bank": {
+          "code": "china_merchants_bank",
+          "name": "China Merchants Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_guangfa_bank": {
+          "code": "china_guangfa_bank",
+          "name": "China Guangfa Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "industrial_bank": {
+          "code": "industrial_bank",
+          "name": "Industrial Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "china_citic_bank": {
+          "code": "china_citic_bank",
+          "name": "China Citic Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "bangko_bank": {
+          "code": "bangko_bank",
+          "name": "Bangkok Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "kasikorn_bank": {
+          "code": "kasikorn_bank",
+          "name": "Kasikorn Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "krungsri": {
+          "code": "krungsri",
+          "name": "Krungsri (Bank of Ayudhya Public Company Limited)",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "krung_thai_bank": {
+          "code": "krung_thai_bank",
+          "name": "Krung Thai Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        },
+        "siam_commercial_bank": {
+          "code": "siam_commercial_bank",
+          "name": "Siam Commercial Bank",
+          "category": "bank_transfer",
+          "logo": "",
+          "icon": ""
+        }
+      }
+    }
+  }
+}

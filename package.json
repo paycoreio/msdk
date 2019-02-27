@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "dev": "webpack --watch --colors --progress"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "sinon": "^7.2.4",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^3.0.0"
+  }
+}
