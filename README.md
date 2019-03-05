@@ -13,12 +13,12 @@ For that you need to add this script iside your head tag on yout HTML template.
 ```
 
 ```html
-<script type= text/javascript
+<script type= text/javascript>
 const PaycoreClient = new MerchantSDK(
     {
      apiKey: "*****" // Your public API key
     });
-></script>
+</script>
 ```
 
 ## Or via npm\yarn
@@ -43,3 +43,90 @@ client
 ```
 
 ## List of methods
+
+- [SDK][1]
+  - [Parameters][2]
+  - [makePaymentPrerequest][11]
+    - [Parameters][12]
+  - [makePayoutPrerequest][13]
+    - [Parameters][14]
+  - [getPayoutInvoiceStatus][15]
+    - [Parameters][16]
+  - [getPaymentInvoiceStatus][17]
+    - [Parameters][18]
+
+## SDK
+
+Initialize the SDK instance
+
+### Parameters
+
+- `options` (required, default `{}`)
+
+Returns **[Object][19]** Returns SDK object instance
+
+### makePaymentPrerequest
+
+Payment prerequest
+
+#### Parameters
+
+- `currency` **[String][20]** The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
+- `amount`
+- `includes` **[Array][22]** The optional relations for entity (PaymentService, PaymentMethod). (optional, default `[]`)
+- **[Number][23]** Not required amount, can be null or float.
+
+Returns **[Promise][21]**
+
+### makePayoutPrerequest
+
+Payment prerequest .
+
+#### Parameters
+
+- `currency` **[String][20]** The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
+- `includes` **[Array][22]** The optional relations for entity (PayoutService, PayoutMethod) (optional, default `[]`)
+
+Returns **[Promise][21]**
+
+### getPayoutInvoiceStatus
+
+Payout invoice status
+
+#### Parameters
+
+- `id` **[String][20]**
+
+### getPaymentInvoiceStatus
+
+Payment invoice status
+
+#### Parameters
+
+- `id` **[String][20]**
+
+Returns **[Promise][21]**
+
+[1]: #sdk
+[2]: #parameters
+[3]: #request
+[4]: #parameters-1
+[5]: #request-1
+[6]: #parameters-2
+[7]: #post
+[8]: #parameters-3
+[9]: #get
+[10]: #parameters-4
+[11]: #makepaymentprerequest
+[12]: #parameters-5
+[13]: #makepayoutprerequest
+[14]: #parameters-6
+[15]: #getpayoutinvoicestatus
+[16]: #parameters-7
+[17]: #getpaymentinvoicestatus
+[18]: #parameters-8
+[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
