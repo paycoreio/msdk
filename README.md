@@ -2,9 +2,9 @@
 
 Merchant SDK is simple API client
 
-## Installation
+# Installation
 
-# You can use this package over CDN
+## You can use this package over CDN
 
 For that you need to add this script iside your head tag on yout HTML template.
 
@@ -12,7 +12,16 @@ For that you need to add this script iside your head tag on yout HTML template.
 <script src="https://unpkg.com/@paycore/merchant-sdk-js@0.1.1/dist/MerchantSDK.umd.min.js"></script>
 ```
 
-# Or via npm\yarn
+```html
+<script type= text/javascript
+const PaycoreClient = new MerchantSDK(
+    {
+     apiKey: "*****" // Your public API key
+    });
+></script>
+```
+
+## Or via npm\yarn
 
 ```bash
 yarn add @paycore/merchant-sdk-js
@@ -32,3 +41,5 @@ client
     console.error("Error", e);
   });
 ```
+
+## List of methods
