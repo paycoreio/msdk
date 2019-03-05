@@ -1,4 +1,8 @@
 {
+  "name": "@paycore/merchant-sdk-js",
+  "version": "0.1.1",
+  "main": "dist/MerchantSDK.js",
+  "browser": "dist/MerchantSDK.umd.min.js",
   "scripts": {
     "test": "jest",
     "build": "webpack",
@@ -18,6 +22,18 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "whatwg-fetch": "^3.0.0"
-  }
+    "@paycore/merchant-sdk-js": "^0.1.1",
+    "axios": "^0.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AistrCyrill/msdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AistrCyrill/msdk/issues"
+  },
+  "homepage": "https://github.com/AistrCyrill/msdk#readme",
+  "description": ""
 }

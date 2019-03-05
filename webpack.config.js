@@ -1,4 +1,4 @@
-const libName = "PaycoreSDK";
+const libName = "MerchantSDK";
 
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
@@ -11,7 +11,7 @@ const clientDevelopmentConfig = {
   output: {
     path: __dirname + "/dist",
     filename: libName + ".umd.js",
-    library: "PaycoreSDK",
+    library: "MerchantSDK",
     libraryTarget: "umd",
     umdNamedDefine: true,
     globalObject: "typeof self !== 'undefined' ? self : this"
@@ -40,4 +40,34 @@ const clientProductionConfig = Object.assign({}, clientDevelopmentConfig, {
   }
 });
 
-module.exports = [clientDevelopmentConfig, clientProductionConfig];
+const serverConfig = {
+  target: "node",
+  mode: "production",
+  entry: __dirname + "/src/index.js",
+  output: {
+    path: __dirname + "/dist",
+    filename: libName + ".js",
+    library: "MerchantSDK",
+    libraryTarget: "umd"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: /node_modules/
+      }
+    ]
+  },
+  resolve: {
+    modules: [path.resolve("./node_modules"), path.resolve("./src")],
+    extensions: [".json", ".js"]
+  },
+  externals: [nodeExternals()]
+};
+
+module.exports = [
+  clientDevelopmentConfig,
+  clientProductionConfig,
+  serverConfig
+];

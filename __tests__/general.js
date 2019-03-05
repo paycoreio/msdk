@@ -23,6 +23,7 @@ describe("GENERAL", () => {
 
   test("Expec to init an SKD with valid currency", function() {
     const PCSDK = new SDK({
+      apiKey: "1234567890",
       currency: "USD"
     });
     expect(PCSDK.currency).toBe("USD");
