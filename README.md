@@ -28,17 +28,17 @@ yarn add @paycore/merchant-sdk-js
 ```
 
 ```javascript
-const MerchantSDK = require("@paycore/merchant-sdk-js");
+const MerchantSDK = require('@paycore/merchant-sdk-js');
 
 const client = new MerchantSDK({
-  apiKey: "*****" // Your public API key
+  apiKey: '*****', // Your public API key
 });
 
 client
-  .makePaymentPrerequest("USD")
+  .makePaymentPrerequest('USD')
   .then(res => console.log(res))
   .catch(e => {
-    console.error("Error", e);
+    console.error('Error', e);
   });
 ```
 
@@ -72,7 +72,6 @@ Payment prerequest
 #### Parameters
 
 - `currency` **[String][20]** The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
-- `amount`
 - `includes` **[Array][22]** The optional relations for entity (PaymentService, PaymentMethod). (optional, default `[]`)
 - **[Number][23]** Not required amount, can be null or float.
 
@@ -80,11 +79,12 @@ Returns **[Promise][21]**
 
 ### makePayoutPrerequest
 
-Payment prerequest .
+Payout prerequest .
 
 #### Parameters
 
 - `currency` **[String][20]** The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
+- `amount` The amount of payout.
 - `includes` **[Array][22]** The optional relations for entity (PayoutService, PayoutMethod) (optional, default `[]`)
 
 Returns **[Promise][21]**

@@ -227,8 +227,6 @@ function SDK(options = {}) {
           metadata = {},
         } = options;
 
-        ß;
-
         const body = {
           public_key: this.apiKey,
           reference_id,
