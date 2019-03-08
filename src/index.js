@@ -1,33 +1,34 @@
-const axios = require("axios");
-const qs = require("qs");
+const axios = require('axios');
+const qs = require('qs');
 /**
  * Initialize the SDK instance
- *
- * @param {String} [options.apiKey] Public API key *required
+ *  @param {Object} options Inial config for SDK
+ * @param {String} options.apiKey Public API key *required
  * @param {String} [options.currency] Currency *required
  * @param {String} [options.BASE_URL] Base URL
- *
+ * @returns {Object} Returns SDK object instance
  */
+
 function SDK(options = {}) {
   try {
     let apiKey = options.apiKey ? options.apiKey : undefined;
     if (!apiKey) {
       throw new Error({
-        message: "No API key passed on init"
+        message: 'No API key passed on init',
       });
     }
 
     let currency = options.currency ? options.currency : undefined;
     let BASE_URL = options.BASE_URL
       ? options.BASE_URL
-      : "https://com-dev.paycore.io/public-api";
+      : 'https://com-dev.paycore.io/public-api';
 
     const SDK = {
       BASE_URL,
       apiKey,
       currency,
       axios: axios.create({
-        paramsSerializer: qs.stringify
+        paramsSerializer: qs.stringify,
       }),
 
       /**
@@ -47,7 +48,7 @@ function SDK(options = {}) {
        * @param  {Object} [data={}]   The HTTP request body (non-GET only)
        *
        * @param  {string} [headers={}]    The request headers
-       * @return {RequestPromise}
+       * @return {Promise}
        */
 
       request(method, endpoint, data = {}, params = {}, headers = {}) {
@@ -56,7 +57,7 @@ function SDK(options = {}) {
           url: endpoint,
           method,
           data,
-          headers
+          headers,
         };
 
         // Axios make auto json parse
@@ -67,7 +68,7 @@ function SDK(options = {}) {
             if (data.errors) {
               throw {
                 api: true,
-                data: data.errors
+                data: data.errors,
               };
             }
             return data;
@@ -75,13 +76,13 @@ function SDK(options = {}) {
           .catch(error => {
             if (error.api) {
               throw {
-                message: "Api error",
-                error: error.data
+                message: 'Api error',
+                error: error.data,
               };
             } else {
               throw {
                 error,
-                message: "Network Error"
+                message: 'Network Error',
               };
             }
           });
@@ -91,93 +92,93 @@ function SDK(options = {}) {
        * POST  method
        * @param  {string} endpoint  The endpoint to post
        * @param  {Object} [body={}] The HTTP request body
-       * @return {RequestPromise}
+       * @return {Promise}
        */
       post(endpoint, body, headers) {
-        return this.request("POST", endpoint, body, {}, headers);
+        return this.request('POST', endpoint, body, {}, headers);
       },
 
       /**
        *
        * @param {String} endpoint The endpoint to get
        * @param {Object} params Query parameters
+       * @return {Promise}
        */
 
       get(endpoint, params = {}) {
-        return this.request("GET", endpoint, params);
+        return this.request('GET', endpoint, params);
       },
 
       /**
        * Payment prerequest
        * @param  {String} currency  The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
-       * @param  {Number}  Not required amount, can be null or float.
        * @param  {Array}  includes The optional relations for entity (PaymentService, PaymentMethod).
-       * @return {RequestPromise}
+       * @return {Promise}
        */
 
-      makePaymentPrerequest(currency, amount, includes = []) {
+      makePaymentPrerequest(currency, includes = []) {
         if (!currency && !this.currency) {
           throw {
-            message: "Client Validation Error",
-            error: "No currency passed"
+            message: 'Client Validation Error',
+            error: 'No currency passed',
           };
         }
         const body = {
           public_key: this.apiKey,
           currency: currency ? currency : this.currency ? this.currency : null,
-          amount
         };
 
         let qParams;
         if (includes.length) {
           qParams = qs.stringify({
-            include: includes
+            include: includes,
           });
         }
 
         return this.post(
-          `${this.BASE_URL}/payment-prerequest?${qParams ? qParams : ""}`,
+          `${this.BASE_URL}/payment-prerequest?${qParams ? qParams : ''}`,
           body,
           {
-            "Content-Type": "application/json"
-          }
+            'Content-Type': 'application/json',
+          },
         );
       },
 
       /**
        * Payment prerequest .
        * @param  {String} currency  The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
+       * @param {Number} amount The amount of payout
        * @param  {Array}  includes The optional relations for entity (PayoutService, PayoutMethod)
        *
-       * @return {RequestPromise}
+       * @return {Promise}
        */
 
-      makePayoutPrerequest(currency, includes = []) {
+      makePayoutPrerequest(currency, amount, includes = []) {
         if (!currency) {
           throw {
-            message: "Client Validation Error",
-            error: "No currency passed"
+            message: 'Client Validation Error',
+            error: 'No currency passed',
           };
         }
         const body = {
           public_key: this.apiKey,
           currency,
-          amount
+          amount,
         };
 
         let qParams;
         if (includes.length) {
           qParams = qs.stringify({
-            include: includes
+            include: includes,
           });
         }
 
         return this.post(
-          `${this.BASE_URL}/payout-prerequest?${qParams ? qParams : ""}`,
+          `${this.BASE_URL}/payout-prerequest?${qParams ? qParams : ''}`,
           body,
           {
-            "Content-Type": "application/json"
-          }
+            'Content-Type': 'application/json',
+          },
         );
       },
 
@@ -192,11 +193,57 @@ function SDK(options = {}) {
       /**
        * Payment invoice status
        * @param {String} id
+       * @return {Promise}
        */
 
       getPaymentInvoiceStatus(id) {
         return this.get(`${this.BASE_URL}/payment-invoices/${id}`);
-      }
+      },
+
+      /**
+       * Create Payment Invoice
+       *
+       * @param {Object} options Payment invoice data
+       * @param {String} [options.reference_id] reference ID
+       * @param {String} [options.description] payment Description
+       * @param {String} [options.currency]   The currency of the payment (3-letter ISO 4217 code). Must be a supported currency.
+       * @param {Number} [options.amount] amount of payment
+       * @param {String} [options.service] code of service
+       * @param {Object} [options.fields] service fields if exists
+       * @param {Object} [options.metadata]  metadata taht relates to payment
+       *
+       *
+       * @return {Promise}
+       */
+
+      createPaymentInvoice(options) {
+        const {
+          reference_id,
+          description = '',
+          currency,
+          amount,
+          service,
+          fields = {},
+          metadata = {},
+        } = options;
+
+        ß;
+
+        const body = {
+          public_key: this.apiKey,
+          reference_id,
+          description,
+          currency,
+          amount,
+          service,
+          fields,
+          metadata,
+        };
+
+        return this.post(`${this.BASE_URL}/payout-prerequest`, body, {
+          'Content-Type': 'application/json',
+        });
+      },
     };
 
     return SDK;
