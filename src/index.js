@@ -71,6 +71,12 @@ function SDK(options = {}) {
                 data: data.errors,
               };
             }
+            if (data.error) {
+              throw {
+                api: true,
+                data: data.error,
+              };
+            }
             return data;
           })
           .catch(error => {

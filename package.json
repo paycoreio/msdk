@@ -1,6 +1,6 @@
 {
   "name": "@paycore/merchant-sdk-js",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "main": "dist/MerchantSDK.js",
   "browser": "dist/MerchantSDK.umd.min.js",
   "scripts": {
