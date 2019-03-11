@@ -61,7 +61,10 @@ Initialize the SDK instance
 
 ### Parameters
 
-- `options` (required, default `{}`)
+- `options` **[Object][19]** Required
+- `options.apiKey` **[String][20]** Commerce account API_KEY
+- `options.BASE_URL` **[String][20]** Base endpoint to commerce backend (default = 'https://com-dev.paycore.io/public-api')
+- `options.currency` **[String][20]** The currency of the SDK client (optional) (3-letter ISO 4217 code). Must be a supported currency.
 
 Returns **[Object][19]** Returns SDK object instance
 
