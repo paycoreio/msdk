@@ -238,7 +238,7 @@ function SDK(options = {}) {
           metadata,
         };
 
-        return this.post(`${this.BASE_URL}/payout-prerequest`, body, {
+        return this.post(`${this.BASE_URL}/payment-invoices`, body, {
           'Content-Type': 'application/json',
         });
       },

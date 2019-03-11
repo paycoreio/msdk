@@ -89,6 +89,23 @@ Payout prerequest .
 
 Returns **[Promise][21]**
 
+### createPaymentInvoice
+
+Payment invoice creation
+
+#### Parameters
+
+- `options` **[Object][19]** PaymentInvoice config
+- `options.reference_id` **[String][20]** The amount of payout.
+- `options.description` **[String][20]** The description of payment invoice
+- `options.currency` **[String][20]** The currency of the amount (3-letter ISO 4217 code). Must be a supported currency.
+- `options.amount` **[Number][23]** The amount of payout.
+- `options.service` **[String][20]** Service id
+- `options.fields` **[Object][19]** The amount of payout.
+- `options.metadata` **[Object][19]** The amount of payout.
+
+Returns **[Promise][21]**
+
 ### getPayoutInvoiceStatus
 
 Payout invoice status

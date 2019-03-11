@@ -1,5 +1,13 @@
 const s = require("@paycore/merchant-sdk-js");
 
+const { jsdocMd } = require("jsdoc-md");
+
+jsdocMd({
+  sourceGlob: "index.js",
+  markdownPath: "readme.md",
+  targetHeading: "Docs"
+});
+
 let x = new s({
   apiKey: "com_pk_live_v2g4OLf68_z9QB7smwg893JYRXMF0a_i5W1DQUpDzzs"
 });
