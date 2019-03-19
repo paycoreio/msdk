@@ -1,6 +1,6 @@
 {
   "name": "@paycore/merchant-sdk-js",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "main": "dist/MerchantSDK.js",
   "browser": "dist/MerchantSDK.umd.min.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "@babel/plugin-transform-parameters": "^7.3.3",
     "@paycore/merchant-sdk-js": "^0.1.1",
     "axios": "^0.18.0",
     "jsdoc-md": "^2.1.0"
