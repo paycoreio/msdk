@@ -1,5 +1,5 @@
-const axios = require('axios');
-const qs = require('qs');
+const axios = require("axios");
+const qs = require("qs");
 /**
  * Initialize the SDK instance
  *  @param {Object} options Inial config for SDK
@@ -14,14 +14,14 @@ function SDK(options = {}) {
     let apiKey = options.apiKey ? options.apiKey : undefined;
     if (!apiKey) {
       throw new Error({
-        message: 'No API key passed on init',
+        message: "No API key passed on init",
       });
     }
 
     let currency = options.currency ? options.currency : undefined;
     let BASE_URL = options.BASE_URL
       ? options.BASE_URL
-      : 'https://com-dev.paycore.io/public-api';
+      : "https://com-dev.paycore.io/public-api";
 
     const SDK = {
       BASE_URL,
@@ -82,13 +82,13 @@ function SDK(options = {}) {
           .catch(error => {
             if (error.api) {
               throw {
-                message: 'Api error',
+                message: "Api error",
                 error: error.data,
               };
             } else {
               throw {
                 error,
-                message: 'Network Error',
+                message: "Network Error",
               };
             }
           });
@@ -101,7 +101,7 @@ function SDK(options = {}) {
        * @return {Promise}
        */
       post(endpoint, body, headers) {
-        return this.request('POST', endpoint, body, {}, headers);
+        return this.request("POST", endpoint, body, {}, headers);
       },
 
       /**
@@ -112,7 +112,7 @@ function SDK(options = {}) {
        */
 
       get(endpoint, params = {}) {
-        return this.request('GET', endpoint, params);
+        return this.request("GET", endpoint, params);
       },
 
       /**
@@ -125,8 +125,8 @@ function SDK(options = {}) {
       makePaymentPrerequest(currency, includes = []) {
         if (!currency && !this.currency) {
           throw {
-            message: 'Client Validation Error',
-            error: 'No currency passed',
+            message: "Client Validation Error",
+            error: "No currency passed",
           };
         }
         const body = {
@@ -142,10 +142,10 @@ function SDK(options = {}) {
         }
 
         return this.post(
-          `${this.BASE_URL}/payment-prerequest?${qParams ? qParams : ''}`,
+          `${this.BASE_URL}/payment-prerequest?${qParams ? qParams : ""}`,
           body,
           {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         );
       },
@@ -162,8 +162,8 @@ function SDK(options = {}) {
       makePayoutPrerequest(currency, amount, includes = []) {
         if (!currency) {
           throw {
-            message: 'Client Validation Error',
-            error: 'No currency passed',
+            message: "Client Validation Error",
+            error: "No currency passed",
           };
         }
         const body = {
@@ -180,10 +180,10 @@ function SDK(options = {}) {
         }
 
         return this.post(
-          `${this.BASE_URL}/payout-prerequest?${qParams ? qParams : ''}`,
+          `${this.BASE_URL}/payout-prerequest?${qParams ? qParams : ""}`,
           body,
           {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         );
       },
@@ -225,12 +225,12 @@ function SDK(options = {}) {
       createPaymentInvoice(options) {
         const {
           reference_id,
-          description = '',
+          description = null,
           currency,
           amount,
-          service,
-          fields = {},
-          metadata = {},
+          service = null,
+          fields = null,
+          metadata = null,
         } = options;
 
         const body = {
@@ -244,8 +244,12 @@ function SDK(options = {}) {
           metadata,
         };
 
+        Object.keys(body).forEach(key =>
+          body[key] === undefined || body[key] === null ? delete body[key] : "",
+        );
+
         return this.post(`${this.BASE_URL}/payment-invoices`, body, {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         });
       },
     };
